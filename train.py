@@ -114,8 +114,8 @@ def train(train_cfg, vlm_cfg):
         if train_cfg.data_cutoff_idx is None:
             run_name = run_name.replace("full_ds", f"{total_dataset_size}samples")
         run = wandb.init(
-            entity="huggingface",
-            project="nanoVLM",
+            entity="huggingface", #
+            project="nanoVLM", 
             config={
                 "VLMConfig": asdict(vlm_cfg),
                 "TrainConfig": asdict(train_cfg)
